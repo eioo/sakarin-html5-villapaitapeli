@@ -6,9 +6,11 @@
   "repository": {
     "url": "https://github.com/eioo/sakarin-html5-villapaitapeli"
   },
+  "homepage": "https://eioo.github.io/sakarin-html5-villapaitapeli",
   "scripts": {
-    "build": "parcel build --no-source-maps --experimental-scope-hoisting src/index.html",
+    "build": "parcel build --no-source-maps --experimental-scope-hoisting --public-url https://eioo.github.io/sakarin-html5-villapaitapeli/ src/index.html",
     "dev": "parcel src/index.html",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "start": "npm run dev"
   },
