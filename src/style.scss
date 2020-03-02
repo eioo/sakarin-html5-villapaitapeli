@@ -1,0 +1,118 @@
+@mixin offset($x, $y) {
+  left: $x;
+  top: $y;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.game {
+  position: relative;
+  width: 550px;
+  height: 400px;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  border: 1px solid gray;
+  overflow: hidden;
+
+  * {
+    position: absolute;
+  }
+}
+
+div[class$='-button'] {
+  cursor: pointer;
+}
+
+div[data-stage='intro'] {
+  img {
+    @include offset(-9px, 14px);
+  }
+
+  .start-button > img {
+    @include offset(321px, 206px);
+    transform: scale(1.93);
+  }
+}
+
+div[data-stage='question'] {
+  img {
+    @include offset(46px, 15px);
+  }
+
+  .no-button {
+    @include offset(289px, 126px);
+  }
+
+  .yes-button {
+    @include offset(290px, 256px);
+  }
+}
+
+div[data-stage='selectedNo'] {
+  @include offset(81px, 8px);
+}
+
+div[data-stage='selectedYes'] {
+  img {
+    @include offset(94px, 9px);
+  }
+
+  .shirt {
+    @include offset(-412px, 222px);
+    animation: move-to-right 1.5s steps(16, end) infinite;
+  }
+
+  @keyframes move-to-right {
+    to {
+      transform: translate(395px);
+    }
+  }
+}
+
+div[data-stage='tickling'] {
+  .with-shirt {
+    @include offset(95px, 25px);
+    animation: spaz-out 0.35s steps(1, end) infinite;
+  }
+
+  .text {
+    @include offset(7px, 61px);
+  }
+
+  @keyframes spaz-out {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    33% {
+      transform: translate(5px, -6px);
+    }
+    66% {
+      transform: translate(-1px, 4px);
+    }
+    100% {
+      transform: translate(-4px, 2px);
+    }
+  }
+}
+
+div[data-stage='gameLost'] {
+  img {
+    @include offset(-8px, 25px);
+  }
+
+  .retry-button {
+    @include offset(238px, 282px);
+  }
+}
+
+div[data-stage='gameWon'] {
+  img {
+    @include offset(-25px, 15px);
+  }
+
+  .retry-button {
+    @include offset(250px, 292px);
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sakarin villapaitapeli</title>
+    <link rel="stylesheet" href="style.scss" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="game">
+        <div data-stage="intro">
+          <img src="../assets/images/sakarin_villapaitapeli.svg" alt="" />
+
+          <div class="start-button">
+            <img src="../assets/images/aloita.svg" alt="" />
+          </div>
+        </div>
+
+        <div data-stage="question">
+          <img src="../assets/images/pue_sakarille_villapaita.svg" alt="" />
+          <div class="no-button">
+            <img src="../assets/images/en.svg" alt="" />
+          </div>
+          <div class="yes-button">
+            <img src="../assets/images/joo.svg" alt="" />
+          </div>
+        </div>
+
+        <div data-stage="selectedNo">
+          <img src="../assets/images/sakari_hmm.svg" alt="" />
+        </div>
+        <div data-stage="selectedYes">
+          <img src="../assets/images/sakari_yllättynyt.svg" alt="" />
+
+          <div class="shirt">
+            <img src="../assets/images/villapaita.svg" alt="" />
+          </div>
+        </div>
+
+        <div data-stage="tickling">
+          <div class="with-shirt">
+            <img src="../assets/images/sakari_villapaidalla.svg" alt="" />
+          </div>
+
+          <div class="text">
+            <img src="../assets/images/hihihi_kutittaa.svg" alt="" />
+          </div>
+        </div>
+
+        <div data-stage="gameLost">
+          <img src="../assets/images/hävisit_pelin.svg" alt="" />
+          <div class="retry-button">
+            <img src="../assets/images/uudelleen.svg" alt="" />
+          </div>
+        </div>
+        <div data-stage="gameWon">
+          <img src="../assets/images/voitit_pelin.svg" alt="" />
+          <div class="retry-button">
+            <img src="../assets/images/uudelleen.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <a
+        class="github-button"
+        href="https://github.com/eioo/sakarin-html5-villapaitapeli"
+        data-icon="octicon-star"
+        data-size="large"
+        data-show-count="true"
+        aria-label="Star eioo/sakarin-html5-villapaitapeli on GitHub"
+        >Star</a
+      >
+    </div>
+    <script src="game.ts"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
